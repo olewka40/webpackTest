@@ -9,7 +9,7 @@ const {
   styleLoader,
   tsLoader,
   imageLoader,
-  fontsLoader,
+  fontsLoader, svgLoader,
 } = require("./webpack/loaders");
 
 const production = process.env.NODE_ENV === "production";
@@ -21,7 +21,14 @@ module.exports = {
     filename: production ? "[name].[contenthash].js" : "[name].js",
   },
   module: {
-    rules: [babelLoader, styleLoader, tsLoader, imageLoader, fontsLoader],
+    rules: [
+      babelLoader,
+      styleLoader,
+      tsLoader,
+      imageLoader,
+      svgLoader,
+      fontsLoader,
+    ],
   },
 
   resolve: {

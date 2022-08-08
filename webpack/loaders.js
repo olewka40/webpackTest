@@ -21,11 +21,14 @@ const babelLoader = {
 // };
 const imageLoader = {
   test: /\.(png|jpe?g|gif|jp2|webp)$/,
-  loader: "file-loader",
-  options: {
-    name: "images/[name].[ext]",
-  },
-};const fontsLoader = {
+  use: "file-loader",
+};
+const svgLoader = {
+  test: /\.svg$/,
+  use: "@svgr/webpack",
+};
+
+const fontsLoader = {
   test: /\.(woff|woff2|ttf|eot)$/,
   use: "file-loader",
 };
@@ -35,5 +38,6 @@ module.exports = {
   styleLoader,
   tsLoader,
   imageLoader,
+  svgLoader,
   fontsLoader,
 };

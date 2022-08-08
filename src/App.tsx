@@ -1,11 +1,8 @@
 import React from "react";
-{
-  /*import svg from "../assets/img/svg.svg";*/
-}
-{
-  /*import png from "../assets/img/png.png";*/
-}
 import "./styles";
+import "./test.css";
+import logo from "./images/pngImage.png";
+import LogoSvg from "./images/svg.svg";
 
 const App: React.FC<any> = () => {
   const handleClick = (e: any) => {
@@ -14,12 +11,17 @@ const App: React.FC<any> = () => {
 
   return (
     <div>
-      <link href="../assets/fonts/Roboto-Bold.ttf" rel="stylesheet" />
-      <link href="../assets/fonts/Roboto-Italic.ttf" rel="stylesheet" />
-      <link href="../assets/fonts/Roboto-Regular.ttf" rel="stylesheet" />
-      <h1>{/*<img width="150" height="150" src={png} alt="png" />*/}</h1>
+      <link href="./assets/fonts/Roboto-Bold.ttf" rel="stylesheet" />
+      <h1>
+        <img width="150" height="150" src={logo} alt="png" />
+      </h1>
       <p>Реакт 18 0 2 приложение2</p>
-      <button>{/*<img src={svg} alt="home" />*/}</button>
+      <button>
+        <LogoSvg />
+      </button>
+      <button className="BigButton">
+        <LogoSvg />
+      </button>
     </div>
   );
 };

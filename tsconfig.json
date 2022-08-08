@@ -16,7 +16,8 @@
     "downlevelIteration": true,
     "noEmit": false,
     "jsx": "react-jsx",
-    "types": ["webpack-env"]
+    "types": ["webpack-env"],
+    "typeRoots": ["./types"]
   },
   "include": ["src"]
 }

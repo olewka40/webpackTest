@@ -5,9 +5,9 @@ export const SumComponent = () => {
   const [firstNumber, setFirstNumber] = useState<number>(0);
   const [secondNumber, setSecondNumber] = useState<number>(0);
 
-  import("./utils").then((math) => {
-    console.log(math.getSum(16, 26));
-  });
+  // import("./utils").then((math) => {
+  //   console.log(math.getSum(16, 26));
+  // });
 
   return (
     <div>

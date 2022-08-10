@@ -6,7 +6,7 @@ import LogoSvg from "assets/images/svg.svg";
 import { Suspense } from "react";
 
 const SumComponent = lazy(() =>
-  import("components/SumComponent").then(({ SumComponent }) => ({
+  import("./components/SumComponent").then(({ SumComponent }) => ({
     default: SumComponent,
   }))
 );
@@ -46,3 +46,7 @@ const App: React.FC<any> = () => {
 };
 
 export default App;
+function alert(arg0: string) {
+    throw new Error("Function not implemented.");
+}
+

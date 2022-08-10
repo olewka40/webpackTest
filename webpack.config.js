@@ -21,7 +21,6 @@ module.exports = {
     filename: production ? "[name].[contenthash].bundle.js" : "[name].js",
     chunkFilename: production ? "[name].[contenthash].bundle.js" : "[name].js",
     assetModuleFilename: "assets/[contenthash][ext][query]",
-    publicPath: "dist/",
     clean: true,
   },
   module: {
@@ -37,8 +36,8 @@ module.exports = {
 
   resolve: {
     alias: {
-      assets: resolve(__dirname, "src/assets"),
-      components: resolve(__dirname, 'src/components'),
+      assets: resolve(__dirname, "./src/assets"),
+      components: resolve(__dirname, "./src/components"),
     },
     extensions: ["*", ".tsx", ".ts", ".js", ".jsx", ".css"],
   },

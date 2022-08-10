@@ -16,9 +16,9 @@
     "downlevelIteration": true,
     "noEmit": false,
     "jsx": "react-jsx",
-    "types": ["webpack-env"],
+    "types": ["webpack-env", "jest", "node"],
     //    "baseUrl": "./",
-    "typeRoots": ["./types"]
+    "typeRoots": ["./types", "../node_modules"]
     //    "paths": {
     //      "assets/*": ["src/assets/*"],
     //      "components/*": ["src/components/*"]

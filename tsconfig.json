@@ -16,13 +16,13 @@
     "downlevelIteration": true,
     "noEmit": false,
     "jsx": "react-jsx",
-    "types": ["webpack-env", "jest", "node","@types/jest"],
-    //    "baseUrl": "./",
-    "typeRoots": ["./types", "../node_modules"]
-    //    "paths": {
-    //      "assets/*": ["src/assets/*"],
-    //      "components/*": ["src/components/*"]
-    //    }
+    "types": ["webpack-env", "jest", "node", "@types/jest"],
+    "baseUrl": "./",
+    "typeRoots": ["./types", "../node_modules"],
+    "paths": {
+      "assets/*": ["src/assets/*"],
+      "components/*": ["src/components/*"]
+    }
   },
-  "include": ["src"],
+  "include": ["src"]
 }

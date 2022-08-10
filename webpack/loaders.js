@@ -34,11 +34,17 @@ const babelLoader = {
 const imageLoader = {
   test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
   type: "asset/resource",
+  generator: {
+    filename: development ? "images/[name][ext]" : "images/[name].[contenthash][ext]", // TODO: production
+  }
 };
 
 const fontsLoader = {
-  test: /\.(woff(2)?|eot|ttf|otf|)$/,
-  type: "asset/inline",
+  test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+  type: "asset/resource",
+  generator: {
+    filename: development ? "fonts/[name][ext]" : "fonts/[name].[contenthash][ext]", // TODO: production
+  },
 };
 const svgLoader = {
   test: /\.svg$/,

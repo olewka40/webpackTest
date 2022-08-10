@@ -10,9 +10,14 @@
     "build:watch": "NODE_ENV=development node ./node_modules/webpack/bin/webpack.js --config webpack.config.js --watch",
     "test": "jest"
   },
-  "browserslist": [
-    "chrome >= 70"
-  ],
+  "browserslist": {
+    "development": [
+      "last 1 chrome version"
+    ],
+    "production": [
+      "Chrome >= 70"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -10,6 +10,9 @@
     "build:dev": "NODE_ENV=development webpack --config webpack.config.js",
     "build:watch": "NODE_ENV=development node ./node_modules/webpack/bin/webpack.js --config webpack.config.js --watch"
   },
+  "browserslist": [
+    "chrome >= 70"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +20,7 @@
     "@types/react": "^18.0.15",
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
+    "postcss-preset-env": "^7.7.2",
     "prettier": "^2.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -36,6 +40,8 @@
     "html-webpack-plugin": "^5.5.0",
     "image-webpack-loader": "^8.1.0",
     "mini-css-extract-plugin": "^2.4.5",
+    "postcss": "^8.4.16",
+    "postcss-loader": "^7.0.1",
     "sass": "^1.45.1",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
@@ -46,8 +52,7 @@
   },
   "babel": {
     "presets": [
-      "@babel/env",
-      "@babel/react"
+      "@babel/preset-env"
     ]
   }
 }

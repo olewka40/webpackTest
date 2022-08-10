@@ -17,7 +17,11 @@
     "noEmit": false,
     "jsx": "react-jsx",
     "types": ["webpack-env"],
-    "typeRoots": ["./types"]
+    "typeRoots": ["./types"],
+    "paths": {
+      "assets/*": ["src/assets/*"],
+      "components/*": ["src/components/*"]
+    }
   },
   "include": ["src"]
 }

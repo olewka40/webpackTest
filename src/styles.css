@@ -1,3 +1,13 @@
-body {
+@font-face {
+  font-family: ChareInk;
+  src: url("./assets/fonts/ChareInk/ChareInk-Italic.ttf") format("woff2"),
+    url("./assets/fonts/ChareInk/ChareInk-Regular.ttf") format("woff2"),
+    url("./assets/fonts/ChareInk/ChareInk-Bold.ttf") format("woff2"),
+    url("./assets/fonts/ChareInk/ChareInk-BoldItalic.ttf") format("woff");
+}
+
+html {
+  font-family: ChareInk, serif;
+  font-weight: bold;
   font-size: 18px;
 }

@@ -1,7 +1,23 @@
+const development = process.env.NODE_ENV === "development";
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 const styleLoader = {
-  test: /\.(css)$/,
-  use: ["style-loader", "css-loader"],
+  test: /\.(sa|sc|c)ss$/,
+  use: [
+    development ? "style-loader" : MiniCssExtractPlugin.loader,
+    "css-loader",
+    {
+      loader: "postcss-loader",
+      options: {
+        postcssOptions: {
+          plugins: [["postcss-preset-env", {}]],
+        },
+      },
+    },
+    "sass-loader",
+  ],
 };
+
 const tsLoader = {
   test: /\.(ts|tsx)$/,
   use: "ts-loader",
@@ -14,23 +30,23 @@ const babelLoader = {
     loader: "babel-loader",
   },
 };
-// const babelLoader = {
-//   test: /\.(js|jsx)$/,
-//   exclude: /node_modules/,
-//   use: ["babel-loader"],
-// };
+
 const imageLoader = {
-  test: /\.(png|jpe?g|gif|jp2|webp)$/,
-  use: "file-loader",
-};
-const svgLoader = {
-  test: /\.svg$/,
-  use: "@svgr/webpack",
+  test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+  type: "asset/resource",
 };
 
 const fontsLoader = {
-  test: /\.(woff|woff2|ttf|eot)$/,
-  use: "file-loader",
+  test: /\.(woff(2)?|eot|ttf|otf|)$/,
+  type: "asset/inline",
+};
+const svgLoader = {
+  test: /\.svg$/,
+  use: [
+    {
+      loader: "@svgr/webpack",
+    },
+  ],
 };
 
 module.exports = {
@@ -38,6 +54,6 @@ module.exports = {
   styleLoader,
   tsLoader,
   imageLoader,
-  svgLoader,
   fontsLoader,
+  svgLoader,
 };

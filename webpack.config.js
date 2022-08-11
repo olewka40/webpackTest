@@ -38,6 +38,7 @@ module.exports = {
 
   resolve: {
     alias: {
+      src: resolve(__dirname, "./src"),
       assets: resolve(__dirname, "./src/assets"),
       components: resolve(__dirname, "./src/components"),
     },
@@ -47,7 +48,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       title: "Webpack & React",
-      template: "./src/index.html",
+      template: "./public/index.html",
       favicon: "./public/favicon.ico",
     }),
     new MiniCssExtractPlugin({

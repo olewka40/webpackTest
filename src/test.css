@@ -1,4 +1,5 @@
 .BigButton {
   border-radius: 6px;
-  border: 6px dotted yellow;
+  border: 6px solid black;
+  margin: 20px;
 }
